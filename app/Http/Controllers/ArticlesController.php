@@ -49,7 +49,7 @@ class ArticlesController extends Controller
 
         $article->save();
 
-        return redirect("/blog", $article->id);
+        return redirect("/blog/" . $article->id);
 
     }
 
