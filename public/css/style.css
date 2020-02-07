@@ -1,0 +1,123 @@
+nav {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 28px;
+    text-transform: uppercase;
+    padding: 30px 50px 30px 50px;
+}
+
+.logo {
+    width: 20%;
+}
+
+.navigation {
+    padding: 30px 50px 30px 50px;
+}
+
+.navbar-nav > li{
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.analogue {
+    margin-top: 100px;
+    margin-left: 350px;
+
+}
+
+.analogueText {
+    font-family: "Montserrat", sans-serif;;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+
+    margin-top: 120px;
+    margin-right: 180px;
+
+
+}
+
+.container {
+    max-width: 100%;
+}
+
+.socialIcon {
+    width: 35px;
+    padding-top: 20px;
+    margin-left: 5px;
+}
+
+.heading {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 28px;
+    padding-bottom: 80px;
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+.buttons {
+    margin-top: 50px;
+    margin-left: 120px;
+
+}
+/* Table on dashboard */
+#studiemonitor {
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 50px;
+}
+#studiemonitor td, #studiemonitor th {
+    border: 1px solid #4b806c;
+    padding: 8px;
+}
+#studiemonitor tr:nth-child(even){background-color: #f2f2f2;}
+#studiemonitor tr:nth-child(odd){background-color: #dbdbdb;}
+#studiemonitor th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4b806c;
+    color: white;
+}
+
+.progress {
+    margin-left: 120px;
+    width: 50%;
+}
+
+.articlesBody {
+    margin: 30px 400px 100px 400px;
+    display:inline-block;
+    float:none;
+    text-align:left;
+}
+
+a {
+    color: #f66d9b;
+}
+
+a:hover {
+    color: #f66d9b;
+}
+
+.createForm {
+    width: 50%;
+
+}
+
+.submit{
+    margin-top: 20px;
+    font-size: 1.1em;
+    float: left;
+    width: 100px;
+    background-color: #f66d9b;
+    color: #fff;
+
+}
+

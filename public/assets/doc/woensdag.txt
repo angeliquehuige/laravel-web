@@ -1,0 +1,11 @@
+Welke routes gaan nu verwijzen naar welke pagina's? Benoem in één overzicht welke pagina wordt aangeroepen met welke route.
+
+
+Kies je voor één of voor meerdere Controllers? Welke naam geef je elke Controller?
+
+
+Welke methods komen in welke Controller? Wat worden de namen van die methods?
+
+
+Je hebt hier route wildcards nodig. Waar is dat?
+
