@@ -5,7 +5,7 @@
 
     <div class="container">
     <div class="row">
-        <div class="col-sm articlesBody">
+        <div class="col-sm articlesBody normal">
             @foreach ($articles as $article)
                     <h3><a href="/blog/{{ $article->id }}">{{ $article->title }}</a></h3>
                     <p>{{ $article->excerpt }}</p>

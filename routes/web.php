@@ -24,17 +24,19 @@ Route::get("/dashboard", function () {
     return view("dashboard");
 });
 
-Route::get("/blog", function () {
-    return view("article", [
-        "articles" => App\Article::take(3)->latest()->get()
-    ]);
-});
+//Route::get("/blog", function () {
+//    return view("article", [
+//        "articles" => App\Article::take(3)->latest()->get()
+//    ]);
+//});
 
+Route::get("/blog", "ArticlesController@index");
 Route::post("/blog", "ArticlesController@store");
 Route::get("/blog/create", "ArticlesController@create");
 Route::get("/blog/{article}", "ArticlesController@show");
 Route::get("/blog/{article}/edit", "ArticlesController@edit");
 Route::put("/blog/{article}", "ArticlesController@update");
+//Route::get("/blog/{article}", "ArticlesController@destroy");
 
 
 

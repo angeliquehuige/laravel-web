@@ -7,9 +7,14 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
-    public function show($id) {
 
-        $article = Article::find($id);
+    public function index() {
+        $articles = Article::latest()->get();
+
+        return view("articles.article", ["articles" => $articles]);
+    }
+
+    public function show(Article $article) {
 
         return view("articles.show", ["article" => $article]);
     }
@@ -20,41 +25,45 @@ class ArticlesController extends Controller
     }
 
     public function store() {
-        $article = new Article();
 
-        $article->title = request("title");
-        $article->excerpt = request("excerpt");
-        $article->body = request("body");
-
-        $article->save();
+        Article::create($this->validateArticle());
 
         return redirect("/blog");
     }
 
-    public function edit($id) {
-
-        $article = Article::find($id);
+    public function edit(Article $article) {
 
         return view("articles.edit", compact("article"));
 
     }
 
-    public function update($id) {
+    public function update(Article $article) {
 
-        $article = Article::find($id);
-
-        $article->title = request("title");
-        $article->excerpt = request("excerpt");
-        $article->body = request("body");
-
-        $article->save();
+        $article->update($this->validateArticle());
 
         return redirect("/blog/" . $article->id);
 
     }
 
-    public function destroy() {
+//    public function destroy($id) {
+//
+//        Article::find($id)->delete();
+//
+//
+//        return redirect("/blog");
+//
+//    }
 
+    /**
+     * @return array
+     */
+    protected function validateArticle(): array
+    {
+        return request()->validate([
+            "title" => "required",
+            "excerpt" => "required",
+            "body" => "required"
+        ]);
     }
 }
 

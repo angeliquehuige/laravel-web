@@ -8,6 +8,13 @@ nav {
     padding: 30px 50px 30px 50px;
 }
 
+.normal {
+    font-family: "Montserrat", sans-serif;;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
 .logo {
     width: 60%;
 }
@@ -121,3 +128,7 @@ a:hover {
 
 }
 
+.error {
+    color: red;
+    font-size: 80%;
+}

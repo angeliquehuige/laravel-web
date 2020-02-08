@@ -5,7 +5,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm articlesBody">
+            <div class="col-sm articlesBody normal">
                 <img src="https://picsum.photos/600/200" alt="random picture">
                 <br><br><br>
                 {!! nl2br(e($article->body)) !!}
