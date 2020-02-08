@@ -11,6 +11,8 @@
                     <p>{{ $article->excerpt }}</p>
                 <br><br>
             @endforeach
+
+            {{ $articles->links() }}
         </div>
     </div>
 </div>
