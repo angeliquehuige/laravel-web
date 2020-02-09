@@ -50,11 +50,11 @@
 
         </form>
 
-{{--        <form method="post" action="/blog">--}}
-{{--            @csrf--}}
+        <form method="get" action="/blog/{{ $article->id }}/destroy">
+            @csrf
 {{--            @method('DELETE')--}}
-{{--            <button type="submit">Delete</button>--}}
-{{--        </form>--}}
+            <button type="submit">Delete</button>
+        </form>
     </div>
 
 

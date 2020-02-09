@@ -45,14 +45,14 @@ class ArticlesController extends Controller
 
     }
 
-//    public function destroy($id) {
-//
-//        Article::find($id)->delete();
-//
-//
-//        return redirect("/blog");
-//
-//    }
+    public function destroy(Article $article) {
+
+        $article->delete();
+
+
+        return redirect("/blog");
+
+    }
 
     /**
      * @return array

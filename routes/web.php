@@ -36,7 +36,7 @@ Route::get("/blog/create", "ArticlesController@create");
 Route::get("/blog/{article}", "ArticlesController@show");
 Route::get("/blog/{article}/edit", "ArticlesController@edit");
 Route::put("/blog/{article}", "ArticlesController@update");
-//Route::get("/blog/{article}", "ArticlesController@destroy");
+Route::get("/blog/{article}/destroy", "ArticlesController@destroy");
 
 
 
