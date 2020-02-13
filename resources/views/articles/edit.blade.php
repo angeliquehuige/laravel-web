@@ -4,7 +4,7 @@
 
     <h1 class="heading">Edit article</h1>
 
-    <div class="container createForm normal">
+    <div class="container form normal">
         <form method="POST" action="/blog/{{ $article->id }}">
             @csrf
             @method("PUT")
@@ -44,7 +44,9 @@
 
             <div>
                 <div>
-                    <button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>Submit</button>
+                    <button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane"
+                                                                            aria-hidden="true"></i>Submit
+                    </button>
                 </div>
             </div>
 
@@ -52,8 +54,9 @@
 
         <form method="get" action="/blog/{{ $article->id }}/destroy">
             @csrf
-{{--            @method('DELETE')--}}
-            <button type="submit">Delete</button>
+            {{--            @method('DELETE')--}}
+            <button type="submit" style="margin-left: 10px" class="btn btn-default submit"><i class="fa fa-paper-plane"
+                                                                    aria-hidden="true"></i>Delete</button>
         </form>
     </div>
 

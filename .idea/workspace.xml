@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21fb99f8-110b-4c48-9b4a-53d460c9677f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AssignmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AssignmentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_02_181625_create_assignments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_02_181625_create_assignments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/article.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/articles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,10 +142,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-project" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\hbo-ict\Jaar 1\blok3\laravel-web\resources\views\dashboard" />
       <recent name="C:\hbo-ict\Jaar 1\blok3\laravel-web\resources\views\articles" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -175,7 +191,11 @@
       <workItem from="1580980459235" duration="31037000" />
       <workItem from="1581167192520" duration="58000" />
       <workItem from="1581167326879" duration="15463000" />
-      <workItem from="1581252662569" duration="2637000" />
+      <workItem from="1581252662569" duration="2772000" />
+      <workItem from="1581265533806" duration="15210000" />
+      <workItem from="1581419383089" duration="5399000" />
+      <workItem from="1581426687987" duration="3025000" />
+      <workItem from="1581581012073" duration="3823000" />
     </task>
     <servers />
   </component>
@@ -183,6 +203,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="221" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581324470452">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="221" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1581324470452" />
     <state x="187" y="100" key="#com.intellij.ide.util.MemberChooser" timestamp="1581172987818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -191,10 +215,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="523" y="4" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1580374697105" />
-    <state x="151" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581077594910">
+    <state x="151" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581582655753">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="151" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1581077594910" />
+    <state x="151" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1581582655753" />
     <state x="123" y="31" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1581173718905">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -211,25 +235,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="197" y="349" key="ReplaceDuplicatesPrompt/0.0.1536.824@0.0.1536.824" timestamp="1581173733799" />
-    <state x="538" y="94" key="SettingsEditor" timestamp="1581172203921">
+    <state x="538" y="94" key="SettingsEditor" timestamp="1581426663590">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="538" y="94" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581172203921" />
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581252662123">
+    <state x="538" y="94" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581426663590" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581581021773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581252662123" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581581021773" />
     <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581169290997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1581169290997" />
+    <state x="398" y="109" width="740" height="606" key="find.popup" timestamp="1581424792919">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="398" y="109" width="740" height="606" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1581424792919" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1581186569818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1581186569818" />
-    <state x="192" y="74" width="672" height="678" key="search.everywhere.popup" timestamp="1581078040669">
+    <state x="192" y="74" width="672" height="678" key="search.everywhere.popup" timestamp="1581276124592">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="192" y="74" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1581078040669" />
+    <state x="192" y="74" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1581276124592" />
   </component>
 </project>

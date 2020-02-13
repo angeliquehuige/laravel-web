@@ -1,6 +1,6 @@
 @extends("layout")
 @section ("content")
-<div class="grid-container">
+    <div class="grid-container">
 
         <div class="left">
             <div class="content">

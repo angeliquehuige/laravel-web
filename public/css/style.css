@@ -23,9 +23,9 @@ nav {
     padding: 30px 50px 30px 50px;
 }
 
-.navbar-nav > li{
-    padding-left:20px;
-    padding-right:20px;
+.navbar-nav > li {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .analogue {
@@ -42,7 +42,6 @@ nav {
 
     margin-top: 120px;
     margin-right: 180px;
-
 
 }
 
@@ -68,29 +67,12 @@ nav {
 }
 
 .buttons {
-    margin-top: 50px;
-    margin-left: 120px;
-
-}
-/* Table on dashboard */
-#studiemonitor {
     margin-top: 30px;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 50px;
+    margin-left: 10px;
 }
-#studiemonitor td, #studiemonitor th {
-    border: 1px solid #4b806c;
-    padding: 8px;
-}
-#studiemonitor tr:nth-child(even){background-color: #f2f2f2;}
-#studiemonitor tr:nth-child(odd){background-color: #dbdbdb;}
-#studiemonitor th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4b806c;
-    color: white;
+
+.monitor {
+    margin: 0px 0px 100px 350px;
 }
 
 .progress {
@@ -98,11 +80,11 @@ nav {
     width: 50%;
 }
 
-.articlesBody {
-    margin: 30px 450px 100px 450px;
-    display:inline-block;
-    float:none;
-    text-align:left;
+.centeredBody {
+    margin: 20px 450px 100px 450px;
+    display: inline-block;
+    float: none;
+    text-align: left;
 }
 
 a {
@@ -113,12 +95,12 @@ a:hover {
     color: #f66d9b;
 }
 
-.createForm {
+.form {
     width: 50%;
 
 }
 
-.submit{
+.submit {
     margin-top: 20px;
     font-size: 1.1em;
     float: left;

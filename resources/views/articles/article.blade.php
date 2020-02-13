@@ -4,16 +4,16 @@
     <h1 class="heading">Blog</h1>
 
     <div class="container">
-    <div class="row">
-        <div class="col-sm articlesBody normal">
-            @foreach ($articles as $article)
+        <div class="row">
+            <div class="col-sm centeredBody normal">
+                @foreach ($articles as $article)
                     <h3><a href="/blog/{{ $article->id }}">{{ $article->title }}</a></h3>
                     <p>{{ $article->excerpt }}</p>
-                <br><br>
-            @endforeach
+                    <br><br>
+                @endforeach
 
-            {{ $articles->links() }}
+                {{ $articles->links() }}
+            </div>
         </div>
     </div>
-</div>
 @endsection

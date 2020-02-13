@@ -30,6 +30,7 @@ Route::get("/dashboard", function () {
 //    ]);
 //});
 
+// Routes for ArticlesController
 Route::get("/blog", "ArticlesController@index");
 Route::post("/blog", "ArticlesController@store");
 Route::get("/blog/create", "ArticlesController@create");
@@ -37,6 +38,18 @@ Route::get("/blog/{article}", "ArticlesController@show");
 Route::get("/blog/{article}/edit", "ArticlesController@edit");
 Route::put("/blog/{article}", "ArticlesController@update");
 Route::get("/blog/{article}/destroy", "ArticlesController@destroy");
+
+// Router for AssignmentController
+Route::get("/dashboard", "AssignmentController@index");
+Route::post("/dashboard", "AssignmentController@store");
+Route::get("/dashboard/create", "AssignmentController@create");
+Route::get("/dashboard/{assignment}", "AssignmentController@show");
+Route::get("/dashboard/{assignment}/edit", "AssignmentController@edit");
+Route::put("/dashboard/{assignment}", "AssignmentController@update");
+
+
+
+
 
 
 

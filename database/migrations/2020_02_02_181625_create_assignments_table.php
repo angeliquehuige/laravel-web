@@ -15,11 +15,13 @@ class CreateAssignmentsTable extends Migration
     {
         Schema::create('assignments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text("body");
+            $table->string("term");
+            $table->string("course");
+            $table->string("grading");
+            $table->decimal("ects", 3, 1)->nullable();
+            $table->decimal("result", 3, 1)->nullable();
             $table->boolean("completed")->default(false);
             $table->timestamps();
-            $table->timestamp("due_date")->nullable();
-            $table->decimal("grade", 3, 1)->nullable();
         });
     }
 

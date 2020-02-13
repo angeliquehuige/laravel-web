@@ -14,7 +14,8 @@
                     Whilst I will be figuring out where my interests in IT lie throughout the years,
                     you can follow most of my progress on this portfolio website.
                     <br><br>
-                    Besides university and work related items, such as my projects and CV, you will find personal things as well.
+                    Besides university and work related items, such as my projects and CV, you will find personal things
+                    as well.
                     Have a look at some of my analogue photos and trips around the world.
                 </p>
                 <a href="https://github.com/ajbhuige" target="_blank">
@@ -29,4 +30,4 @@
 
             </div>
         </div>
-    @endsection
+@endsection
