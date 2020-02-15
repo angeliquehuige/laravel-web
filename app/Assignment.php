@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Assignment extends Model
 {
+    protected $fillable = ["course_id", "name", "weight", "result"];
+
     public function setGrade($grade)
     {
         if ($grade > $this->grade) {
@@ -21,5 +23,11 @@ class Assignment extends Model
         }
 
         $this->save();
+    }
+
+    public function courses()
+    {
+        return $this->belongsTo(Course::class);
+
     }
 }

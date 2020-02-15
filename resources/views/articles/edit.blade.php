@@ -45,7 +45,7 @@
             <div>
                 <div>
                     <button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane"
-                                                                            aria-hidden="true"></i>Submit
+                                                                            aria-hidden="true"></i>Save
                     </button>
                 </div>
             </div>

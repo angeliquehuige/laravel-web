@@ -9,71 +9,35 @@
             @csrf
 
             <div class="form-group">
-                <label for="Term">Term name</label>
+                <label for="course_id">Course ID</label>
 
                 <div>
                     <input
                         class="form-control"
-                        type="text"
-                        name="term"
-                        id="term"
-                        value="{{ old("term") }}">
+                        type="course_id"
+                        name="course_id"
+                        id="course_id"
+                        value="{{ old("course_id") }}">
 
 
-                    @if($errors->has("term"))
-                        <p class="error">{{ $errors->first("term") }}</p>
+                    @if($errors->has("course_id"))
+                        <p class="error">{{ $errors->first("course_id") }}</p>
                     @endif
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="course">Course</label>
+                <label for="name">Name</label>
                 <div>
                 <textarea
                     class="form-control"
-                    name="course"
-                    id="course"
-                >{{ old("course") }}</textarea>
+                    name="name"
+                    id="name"
+                >{{ old("name") }}</textarea>
 
-                    @if($errors->has("course"))
-                        <p class="error">{{ $errors->first("course") }}</p>
+                    @if($errors->has("name"))
+                        <p class="error">{{ $errors->first("name") }}</p>
                     @endif
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="grading">Grading</label>
-
-                <div>
-                <textarea
-                    class="form-control"
-                    type="grading"
-                    name="grading"
-                    id="grading"
-                >{{ old("grading") }}</textarea>
-
-                    @if($errors->has("grading"))
-                        <p class="error">{{ $errors->first("grading") }}</p>
-                    @endif
-
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="ects">ECTS</label>
-
-                <div>
-                <textarea
-                    class="form-control"
-                    type="ects"
-                    name="ects"
-                    id="ects"
-                >{{ old("ects") }}</textarea>
-
-                    @if($errors->has("ects"))
-                        <p class="error">{{ $errors->first("ects") }}</p>
-                    @endif
-
                 </div>
             </div>
 
@@ -83,7 +47,7 @@
                 <div>
                 <textarea
                     class="form-control"
-                    type="result"
+                    type="text"
                     name="result"
                     id="result"
                 >{{ old("result") }}</textarea>

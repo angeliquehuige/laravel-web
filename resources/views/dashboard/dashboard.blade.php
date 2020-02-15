@@ -26,9 +26,9 @@
                             <table class="table" cellspacing="0">
                                 <thead>
                                 <tr>
-                                    <th>Course</th>
-                                    <th>Grading</th>
-                                    <th>EC</th>
+                                    <th>Course id</th>
+                                    <th>Name</th>
+                                    <th>Weight</th>
                                     <th>Result (0-10)</th>
                                 </tr>
                                 </thead>

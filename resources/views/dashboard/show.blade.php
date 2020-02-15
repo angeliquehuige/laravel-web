@@ -1,7 +1,9 @@
 @extends("layout")
 @section("content")
 
-    <h1 class="heading">{{ $assignment->course }}</h1>
+    <h1 class="heading">{{ $assignment->Name }} <br><br>
+        {{ $assignment->result}}
+    </h1>
 
     <div class="container">
         <div class="row">
@@ -11,10 +13,10 @@
                     </button></a>
                 </form>
                 <br><br><br>
-                <p>Term: </p>{{ $assignment->term}}
-                <p>Grading: </p>{{ $assignment->grading}}
-                <p>EC: </p>{{ $assignment->ects}}
-                <p>Result: </p>{{ $assignment->result}}
+                <div>
+                    <p>The assignment {{ $assignment->name }} is part of the {{ $assignment->course_id}} st/rd term.
+                    The result of this was {{ $assignment->result}} out of 10.</p>
+                </div>
             </div>
         </div>
     </div>
