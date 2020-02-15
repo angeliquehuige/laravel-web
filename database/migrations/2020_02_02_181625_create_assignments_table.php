@@ -21,6 +21,11 @@ class CreateAssignmentsTable extends Migration
             $table->decimal("result", 3, 1)->nullable();
             $table->boolean("completed")->default(false);
             $table->timestamps();
+
+            $table->foreign("course_id")
+                ->references("id")
+                ->on("courses")
+                ->onDelete("cascade");
         });
     }
 
