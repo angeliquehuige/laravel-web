@@ -40,7 +40,7 @@ Route::put("/blog/{article}", "ArticlesController@update");
 Route::get("/blog/{article}/destroy", "ArticlesController@destroy");
 
 // Router for AssignmentsController
-Route::get("/dashboard", "AssignmentsController@index");
+Route::get("/dashboard", "CoursesController@index");
 Route::post("/dashboard", "AssignmentsController@store");
 Route::get("/dashboard/create", "AssignmentsController@create");
 Route::get("/dashboard/{assignment}", "AssignmentsController@show");
