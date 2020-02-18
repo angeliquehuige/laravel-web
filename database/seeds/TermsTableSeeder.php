@@ -20,14 +20,11 @@ class TermsTableSeeder extends Seeder
             ],
             [
                 "name" => "Blok 3"
-            ],
-            [
-                "name" => "Blok 4"
-            ],
+            ]
         ];
 
         foreach ($terms as $term) {
-            Term::create($term);
+            App\Term::create($term);
         }
     }
 }

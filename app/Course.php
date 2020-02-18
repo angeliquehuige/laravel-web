@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
+    protected $fillable = ["term_id", "name", "ed"];
+
     private $completed;
     private $assignments;
 
@@ -13,6 +15,11 @@ class Course extends Model
     {
         return $this->hasMany(Assignment::class);
 
+    }
+
+    public function term ()
+    {
+        return $this->belongsTo(Term::class);
     }
 
 //    public function completedCourse()
