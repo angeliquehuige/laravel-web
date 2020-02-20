@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-sm centeredBody normal">
                <a href="/blog/{{ $article->id }}/edit"><button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane"
-                                                                        aria-hidden="true"></i>Submit
+                                                                        aria-hidden="true"></i>Edit
                 </button></a>
                 </form>
                 <br><br><br>

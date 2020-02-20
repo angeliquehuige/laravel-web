@@ -39,14 +39,15 @@ Route::get("/blog/{article}/edit", "ArticlesController@edit");
 Route::put("/blog/{article}", "ArticlesController@update");
 Route::get("/blog/{article}/destroy", "ArticlesController@destroy");
 
-// Router for AssignmentsController
-Route::get("/dashboard", "TermsController@index");
-Route::post("/dashboard", "AssignmentsController@store");
-Route::get("/dashboard/create", "AssignmentsController@create");
-Route::get("/dashboard/{assignment}", "AssignmentsController@show");
-Route::get("/dashboard/{assignment}/edit", "AssignmentsController@edit");
-Route::put("/dashboard/{assignment}", "AssignmentsController@update");
+//// Router for AssignmentsController
+//Route::get("/dashboard", "AssignmentsController@index");
+//Route::post("/dashboard", "AssignmentsController@store");
+//Route::get("/dashboard/create", "AssignmentsController@create");
+//Route::get("/dashboard/{assignment}", "AssignmentsController@show");
+//Route::get("/dashboard/{assignment}/edit", "AssignmentsController@edit");
+//Route::put("/dashboard/{assignment}", "AssignmentsController@update");
 
+Route::resource("dashboard", "AssignmentsController");
 
 
 
