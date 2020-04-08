@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-//    protected $fillable = ["term_id", "name", "ec"];
+    protected $fillable = ["term_id", "name", "ec"];
 
-    private $completed;
-    private $assignments;
+//    private $completed;
 
     public function assignments()
     {
@@ -21,15 +20,15 @@ class Course extends Model
         return $this->belongsTo(Term::class);
     }
 
-    public function completedCourse()
-    {
-
-        foreach ($this->assignments as $assignment) {
-
-            if ($assignment->completed === true) {
-                return $assignment->course->ec;
-            }
-        }
-
-    }
+//    public function completedCourse()
+//    {
+//
+//        foreach ($this->assignments as $assignment) {
+//
+//            if ($assignment->completed === true) {
+//                return $assignment->course->ec;
+//            }
+//        }
+//
+//    }
 }
