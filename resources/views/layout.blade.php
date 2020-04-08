@@ -31,9 +31,12 @@
                 <li class="nav-item {{ Request::path() === "profile" ? "active" : "" }}">
                     <a class="nav-link" href="/profile">About</a>
                 </li>
-                <li class="nav-item {{ Request::path() === "article" ? "active" : "" }}">
-                    <a class="nav-link" href="/blog">Blog</a>
+                <li class="nav-item {{ Request::path() === "photography" ? "active" : "" }}">
+                    <a class="nav-link" href="/photography">Photography</a>
                 </li>
+{{--                <li class="nav-item {{ Request::path() === "article" ? "active" : "" }}">--}}
+{{--                    <a class="nav-link" href="/blog">Blog</a>--}}
+{{--                </li>--}}
             </ul>
         </div>
     </nav>

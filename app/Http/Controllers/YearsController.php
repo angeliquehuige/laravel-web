@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Year;
 use Illuminate\Http\Request;
-use App\Term;
 
-class TermsController extends Controller
+class YearsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,9 @@ class TermsController extends Controller
      */
     public function index()
     {
-        //
+        $years = Year::all();
+
+        return view('dashboard.dashboard')->with('years', $years);
     }
 
     /**
@@ -24,28 +26,27 @@ class TermsController extends Controller
      */
     public function create()
     {
-        return $this->store();
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        Term::create();
-        return view("dashboard.dashboard");
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param  \App\Year  $year
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Year $year)
     {
         //
     }
@@ -53,10 +54,10 @@ class TermsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
+     * @param  \App\Year  $year
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Year $year)
     {
         //
     }
@@ -64,11 +65,11 @@ class TermsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Year  $year
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Year $year)
     {
         //
     }
@@ -76,14 +77,11 @@ class TermsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Term $term
-     * @return void
-     * @throws Exception
+     * @param  \App\Year  $year
+     * @return \Illuminate\Http\Response
      */
-    public function destroy(Term $term)
+    public function destroy(Year $year)
     {
-        $term->delete();
-
-        return view("dashboard.dashboard");
+        //
     }
 }

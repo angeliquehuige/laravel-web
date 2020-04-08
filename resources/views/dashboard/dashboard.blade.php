@@ -15,11 +15,13 @@
                 <br><br><br>
                 <section id="tabs" class="project-tab">
                     <nav>
-                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-blok1-tab" data-toggle="tab"
-                               href="#nav-blok1"
-                               role="tab" aria-controls="nav-blok1" aria-selected="true">Blok 1</a>
-                        </div>
+                        @foreach($years as $year)
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-blok1-tab" data-toggle="tab"
+                                   href="#nav-blok1"
+                                   role="tab" aria-controls="nav-blok1" aria-selected="true">Year {{$year->id}}</a>
+                            </div>
+                        @endforeach
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-blok1" role="tabpanel"

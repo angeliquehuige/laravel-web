@@ -48,6 +48,8 @@ Route::get("/blog/{article}/destroy", "ArticlesController@destroy");
 //Route::put("/dashboard/{assignment}", "AssignmentsController@update");
 
 Route::resource("dashboard", "AssignmentsController");
+Route::resource("photography", "PhotosController");
+
 
 
 

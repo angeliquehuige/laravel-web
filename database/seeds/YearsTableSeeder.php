@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TermsTableSeeder extends Seeder
+class YearsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class TermsTableSeeder extends Seeder
     public function run()
     {
         for ($i = 1; $i <= 4; $i++) {
-            App\Term::create(['id' => $i]);
+            App\Year::create(['id' => $i]);
         }
     }
 }
