@@ -14,7 +14,8 @@ class TermsController extends Controller
      */
     public function index()
     {
-        //
+        $terms = Term::all();
+        return view('dashboard.dashboard')->with('terms', $terms);
     }
 
     /**
