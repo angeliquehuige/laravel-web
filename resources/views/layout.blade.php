@@ -48,6 +48,19 @@
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+    var duplicates = [];
+    $('#dashboardTable .duplicates').each(function () {
+        var text = $(this).text();
+        if ($.inArray(text, duplicates) === -1) {
+            duplicates.push(text);
+        } else {
+            $(this).text('')
+
+        }
+    });
+</script>
+
 </body>
 
 </html>

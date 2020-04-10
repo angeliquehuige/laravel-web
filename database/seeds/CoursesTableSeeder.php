@@ -53,6 +53,18 @@ class CoursesTableSeeder extends Seeder
             ],
             [
                 "term_id" => 2,
+                "name" => "Professional Skills 1",
+                "ec" => 5,
+                'assignments' => [
+                    [
+                        'name' => 'Essay',
+                        'weight' => 100,
+                        "result" => 9.3,
+                    ],
+                ]
+            ],
+            [
+                "term_id" => 2,
                 "name" => "Object-Oriented Programming",
                 "ec" => 5.0,
                 'assignments' => [
@@ -68,23 +80,10 @@ class CoursesTableSeeder extends Seeder
                     ],
                 ]
             ],
-
-            [
-                "term_id" => 2,
-                "name" => "Professional Skills 1",
-                "ec" => 5,
-                'assignments' => [
-                    [
-                        'name' => 'Essay',
-                        'weight' => 100,
-                        "result" => 9.3,
-                    ],
-                ]
-            ],
             [
                 "term_id" => 3,
                 "name" => "Professional Skills 2",
-                "ec" => 2.5,
+                "ec" => 1.25,
                 'assignments' => [
                     [
                         'name' => 'Agile functioning',
@@ -125,7 +124,7 @@ class CoursesTableSeeder extends Seeder
             [
                 "term_id" => 3,
                 "name" => "Framework Project 1",
-                "ec" => 5,
+                "ec" => 2.5,
                 'assignments' => [
                     [
                         'name' => 'Requirements',

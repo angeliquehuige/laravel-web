@@ -24,7 +24,7 @@
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-blok1" role="tabpanel"
                              aria-labelledby="nav-blok1-tab">
-                            <table class="table" cellspacing="0">
+                            <table id="dashboardTable" class="table" cellspacing="0">
                                 <thead>
                                 <tr>
                                     <th>Term</th>
@@ -38,10 +38,10 @@
                                 <tbody>
                                 @foreach($assignments as $assignment)
                                     <tr>
-                                        <td>
+                                        <td class="duplicates">
                                             <a href="/dashboard/{{ $assignment->id }}">{{$assignment->course->term->id}}</a>
                                         </td>
-                                        <td>{{$assignment->course->name}}</td>
+                                        <td class="duplicates">{{$assignment->course->name}}</td>
                                         <td>{{$assignment->name}}</td>
                                         <td>{{$assignment->weight}}%</td>
                                         <td>{{$assignment->course->ec}}</td>
@@ -51,32 +51,9 @@
                                 </tbody>
                             </table>
                         </div>
-                        {{--                        <div class="tab-pane fade" id="nav-blok3" role="tabpanel" aria-labelledby="nav-blok3-tab">--}}
-                        {{--                            <table class="table" cellspacing="0">--}}
-                        {{--                                <thead>--}}
-                        {{--                                <tr>--}}
-                        {{--                                    <th>Course</th>--}}
-                        {{--                                    <th>Grading</th>--}}
-                        {{--                                    <th>ECTS</th>--}}
-                        {{--                                    <th>Result (0-10)</th>--}}
-                        {{--                                </tr>--}}
-                        {{--                                </thead>--}}
-                        {{--                                <tbody>--}}
-                        {{--                                @foreach($assignments as $assignment)--}}
-                        {{--                                    <tr>--}}
-                        {{--                                        <td><a href="#">{{$assignment->course}}</a></td>--}}
-                        {{--                                        <td>{{$assignment->grading}}</td>--}}
-                        {{--                                        <td>{{$assignment->ects}}</td>--}}
-                        {{--                                        <td>{{$assignment->result}}</td>--}}
-                        {{--                                    </tr>--}}
-                        {{--                                @endforeach--}}
-                        {{--                                </tbody>--}}
-                        {{--                            </table>--}}
-                        {{--                        </div>--}}
                     </div>
                 </section>
             </div>
         </div>
     </div>
-
 @endsection
