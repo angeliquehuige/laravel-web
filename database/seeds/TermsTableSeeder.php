@@ -11,7 +11,8 @@ class TermsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i <= 4; $i++) {
+        for ($i = 1; $i <= 4; $i++)
+        {
             App\Term::create(['id' => $i]);
         }
     }

@@ -15,13 +15,11 @@
                 <br><br><br>
                 <section id="tabs" class="project-tab">
                     <nav>
-                        @foreach($years as $year)
-                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-blok1-tab" data-toggle="tab"
-                                   href="#nav-blok1"
-                                   role="tab" aria-controls="nav-blok1" aria-selected="true">Year {{$year->id}}</a>
-                            </div>
-                        @endforeach
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-blok1-tab" data-toggle="tab"
+                               href="#nav-blok1"
+                               role="tab" aria-controls="nav-blok1" aria-selected="true">Year 1</a>
+                        </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-blok1" role="tabpanel"
@@ -29,6 +27,7 @@
                             <table class="table" cellspacing="0">
                                 <thead>
                                 <tr>
+                                    <th>Term</th>
                                     <th>Course</th>
                                     <th>Assignment</th>
                                     <th>Weight</th>
@@ -40,10 +39,11 @@
                                 @foreach($assignments as $assignment)
                                     <tr>
                                         <td>
-                                            <a href="/dashboard/{{ $assignment->id }}">{{$assignment->course->name}}</a>
+                                            <a href="/dashboard/{{ $assignment->id }}">{{$assignment->course->term->id}}</a>
                                         </td>
+                                        <td>{{$assignment->course->name}}</td>
                                         <td>{{$assignment->name}}</td>
-                                        <td>{{$assignment->weight}}</td>
+                                        <td>{{$assignment->weight}}%</td>
                                         <td>{{$assignment->course->ec}}</td>
                                         <td>{{$assignment->result}}</td>
                                     </tr>

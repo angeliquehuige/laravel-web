@@ -9,8 +9,8 @@ class CoursesController extends Controller
 {
     public function index(){
 
-        $courses = Course::all();
-        return view('dashboard.dashboard')->with('courses', $courses);
+//        $courses = Course::all();
+//        return view('dashboard.dashboard')->with('courses', $courses);
 
     }
 }

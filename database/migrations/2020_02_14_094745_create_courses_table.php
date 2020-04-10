@@ -13,17 +13,17 @@ class CreateCoursesTable extends Migration
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create("courses", function (Blueprint $table) {
             $table->bigIncrements('id');
-//            $table->unsignedBigInteger('term_id');
-            $table->string("name");
-            $table->decimal("ec", 2, 1);
+            $table->unsignedBigInteger("term_id");
+            $table->text("name");
+            $table->decimal("ec", 3, 1)->nullable();
             $table->timestamps();
 
-//            $table->foreign("term_id")
-//                ->references("id")
-//                ->on("term")
-//                ->onDelete("cascade");
+            $table->foreign("term_id")
+                ->references("id")
+                ->on("terms")
+                ->onDelete("cascade");
         });
     }
 
