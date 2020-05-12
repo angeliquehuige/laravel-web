@@ -49,7 +49,9 @@ Route::get("/blog/{article}/destroy", "ArticlesController@destroy");
 
 Route::resource("dashboard", "AssignmentsController");
 
-
+Route::get("/500", function () {
+    return view("errors.500");
+});
 
 
 
