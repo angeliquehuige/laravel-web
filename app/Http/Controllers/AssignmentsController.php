@@ -19,6 +19,7 @@ class AssignmentsController extends Controller
     {
 
         return view("dashboard.show", ["assignment" => $assignment]);
+
     }
 
     public function create(){

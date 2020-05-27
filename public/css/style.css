@@ -67,10 +67,19 @@ nav {
 
 }
 
+.headingsmall {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 30px;
+
+}
+
 .buttons {
     margin-top: 30px;
     margin-left: 10px;
 }
+
 
 .monitor {
     margin: 0px 0px 100px 350px;
@@ -105,6 +114,14 @@ a:hover {
     margin-top: 10px;
     font-size: 1.1em;
     /*float: left;*/
+    width: auto;
+    background-color: #5dbcd2;
+    color: #fff;
+
+}
+
+.edit {
+    font-size: 0.8em;
     width: auto;
     background-color: #5dbcd2;
     color: #fff;

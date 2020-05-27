@@ -9,8 +9,25 @@
             @csrf
             @method("PUT")
 
+{{--            <div class="form-group">--}}
+{{--                <label for="term_id">Term</label>--}}
+{{--                @foreach($assignment->course->term->courses as $course)--}}
+{{--                    <div class="form-check">--}}
+{{--                        <input class="form-check-input" type="radio" name="term_id" id="term_id"--}}
+{{--                               value="{{$course->term_id}}" checked>--}}
+{{--                        @if($errors->has("course_id"))--}}
+{{--                            <p class="error">{{ $errors->first("course_id") }}</p>--}}
+{{--                        @endif--}}
+{{--                        <label class="form-check-label" for="term_id">--}}
+{{--                            Term {{$course->term_id}}--}}
+{{--                        </label>--}}
+{{--                    </div>--}}
+{{--                @endforeach--}}
+
+{{--            </div>--}}
+
             <div class="form-group">
-                <label for="course_id">Course id</label>
+                <label for="term_id">Term</label>
 
                 <div>
                     <input
@@ -18,7 +35,7 @@
                         type="text"
                         name="course_id"
                         id="course_id"
-                        value="{{ $assignment->course_id }}">
+                        value="{{ $assignment->course->term_id }}">
 
 
                     @if($errors->has("course_id"))
@@ -28,7 +45,22 @@
             </div>
 
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="course">Course</label>
+                <div>
+                <textarea
+                    class="form-control"
+                    name="course"
+                    id="course"
+                >{{ $assignment->course->name }}</textarea>
+
+                    @if($errors->has("course"))
+                        <p class="error">{{ $errors->first("course") }}</p>
+                    @endif
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Assignment name</label>
                 <div>
                 <textarea
                     class="form-control"

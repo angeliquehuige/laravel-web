@@ -32,7 +32,7 @@
                                     <th>Assignment</th>
                                     <th>Weight</th>
                                     <th>EC</th>
-                                    <th>Result (0-10)</th>
+                                    <th>Result</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -46,6 +46,12 @@
                                         <td>{{$assignment->weight}}%</td>
                                         <td>{{$assignment->course->ec}}</td>
                                         <td>{{$assignment->result}}</td>
+                                        <td><a href="/dashboard/{{ $assignment->id }}/edit">
+                                                <button type="button" class="btn btn-default edit"><i class="fa fa-paper-plane"
+                                                                                                      aria-hidden="true"></i>Edit
+                                                </button>
+                                            </a>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>

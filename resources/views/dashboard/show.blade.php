@@ -1,23 +1,38 @@
 @extends("layout")
 @section("content")
 
-    <h1 class="heading">{{ $assignment->Name }} <br><br>
-        {{ $assignment->result}}
-    </h1>
+    <h1 class="heading">Term {{$assignment->course->term->id}}</h1>
 
     <div class="container">
         <div class="row">
             <div class="col-sm centeredBody normal">
-                <a href="/dashboard/{{ $assignment->id }}/edit"><button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane"
-                                                                                                                aria-hidden="true"></i>Edit
-                    </button></a>
-                </form>
-                <br><br><br>
-                <div>
-                    <p>The assignment {{ $assignment->name }} is part of the {{ $assignment->course_id}} st/rd term.
-                    The result of this was {{ $assignment->result}} out of 10.</p>
-                </div>
+                <h2 class="headingsmall">Courses</h2>
+                <table id="dashboardTable" class="table" cellspacing="0">
+                    <tbody>
+                    @foreach($assignment->course->term->courses as $course)
+                        <tr>
+                            <td class="duplicates">
+                                {{$course->name}}
+                            </td>
+                            <td><a href="/dashboard/{{ $course->id }}/edit">
+                                    <button type="button" class="btn btn-default edit"><i class="fa fa-paper-plane"
+                                                                                          aria-hidden="true"></i>Edit
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 @endsection
+
+
+{{--<td><a href="/dashboard/{{ $assignment->id }}/edit">--}}
+{{--        <button type="button" class="btn btn-default edit"><i class="fa fa-paper-plane"--}}
+{{--                                                              aria-hidden="true"></i>Edit--}}
+{{--        </button>--}}
+{{--    </a>--}}
+{{--</td>--}}

@@ -19,11 +19,6 @@ Route::get("/profile", function () {
     return view("profile");
 });
 
-
-Route::get("/dashboard", function () {
-    return view("dashboard");
-});
-
 //Route::get("/blog", function () {
 //    return view("article", [
 //        "articles" => App\Article::take(3)->latest()->get()
@@ -39,19 +34,9 @@ Route::get("/blog/{article}/edit", "ArticlesController@edit");
 Route::put("/blog/{article}", "ArticlesController@update");
 Route::get("/blog/{article}/destroy", "ArticlesController@destroy");
 
-//// Router for AssignmentsController
-//Route::get("/dashboard", "AssignmentsController@index");
-//Route::post("/dashboard", "AssignmentsController@store");
-//Route::get("/dashboard/create", "AssignmentsController@create");
-//Route::get("/dashboard/{assignment}", "AssignmentsController@show");
-//Route::get("/dashboard/{assignment}/edit", "AssignmentsController@edit");
-//Route::put("/dashboard/{assignment}", "AssignmentsController@update");
+// Route for dashboard
+Route::resource("dashboard", "AssignmentsController" ,['parameters' => ['dashboard' => 'assignment']]);
 
-Route::resource("dashboard", "AssignmentsController");
-
-Route::get("/500", function () {
-    return view("errors.500");
-});
 
 
 
