@@ -8,7 +8,8 @@
             <div class="col-sm centeredBody normal">
                 @foreach ($articles as $article)
                     <h3><a href="/blog/{{ $article->id }}">{{ $article->title }}</a></h3>
-                    <p>{{ $article->excerpt }}</p>
+                    <img src="{{$article->mainpic}}">
+                    <p>{{ $article->description }}</p>
                     <br><br>
                 @endforeach
 

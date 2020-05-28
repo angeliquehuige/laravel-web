@@ -22,12 +22,12 @@
             </div>
 
             <div class="form-group">
-                <label for="excerpt">Excerpt</label>
+                <label for="description">Description</label>
                 <div>
                     <textarea
                         class="form-control"
-                        name="excerpt"
-                        id="excerpt">{{ $article->excerpt }}</textarea>
+                        name="description"
+                        id="description">{{ $article->description }}</textarea>
                 </div>
             </div>
 

@@ -68,7 +68,11 @@ class ArticlesController extends Controller
     {
         return request()->validate([
             "title" => "required",
-            "excerpt" => "required",
+            "location" => "required",
+            "month" => "required",
+            "year" => "required",
+            "mainpic" => "required",
+            "description" => "required",
             "body" => "required"
         ]);
     }

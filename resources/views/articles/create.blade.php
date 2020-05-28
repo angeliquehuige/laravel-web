@@ -7,37 +7,86 @@
     <div class="container form normal">
         <form method="POST" action="/blog">
             @csrf
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="title">Title</label>
 
-            <div class="form-group">
-                <label for="title">Title</label>
+                    <div>
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="title"
+                            id="title"
+                            value="{{ old("title") }}">
+                    </div>
+                </div>
 
-                <div>
-                    <input
-                        class="form-control"
-                        type="text"
-                        name="title"
-                        id="title"
-                        value="{{ old("title") }}">
+                <div class="form-group col">
+                    <label for="mainpic">Image link</label>
 
-
-                    @if($errors->has("title"))
-                        <p class="error">{{ $errors->first("title") }}</p>
-                    @endif
+                    <div>
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="mainpic"
+                            id="mainpic"
+                            value="{{ old("mainpic") }}">
+                    </div>
                 </div>
             </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="location">Location</label>
 
+                    <div>
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="location"
+                            id="location"
+                            value="{{ old("location") }}">
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label for="year">Year</label>
+
+                    <div>
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="year"
+                            id="year"
+                            value="{{ old("year") }}">
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label for="month">Month</label>
+                    <div>
+                        <select id="month" class="form-control" name="month">
+                            <option selected>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
-                <label for="excerpt">Excerpt</label>
+                <label for="description">Description</label>
                 <div>
                 <textarea
                     class="form-control"
-                    name="excerpt"
-                    id="excerpt"
-                >{{ old("excerpt") }}</textarea>
-
-                    @if($errors->has("excerpt"))
-                        <p class="error">{{ $errors->first("excerpt") }}</p>
-                    @endif
+                    name="description"
+                    id="description"
+                >{{ old("description") }}</textarea>
                 </div>
             </div>
 
@@ -51,11 +100,6 @@
                     name="body"
                     id="body"
                 >{{ old("body") }}</textarea>
-
-                    @if($errors->has("body"))
-                        <p class="error">{{ $errors->first("body") }}</p>
-                    @endif
-
                 </div>
             </div>
 
