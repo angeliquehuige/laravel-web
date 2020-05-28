@@ -62,10 +62,12 @@ class AssignmentsController extends Controller
     protected function validateArticle(): array
     {
         return request()->validate([
-            "course_id" => "required",
-            "name" => "required",
-            "weight" => "required",
-            "result" => "required",
+            "term_id" => "required",
+            "course_name" => "required",
+            "assignment_name" => "required",
+            "assingment_weight" => "required",
+            "course_ec" => "required",
+            "assignment_result" => "required"
         ]);
     }
 }

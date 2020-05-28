@@ -10,21 +10,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Assignment extends Model
 {
-    protected $fillable = ["course_id", "name", "weight", "result"];
+    protected $fillable = ["term_id", "course_name", "assignment_name", "assingment_weight", "course_ec", "assignment_result"];
     private $result;
-
-    public function setGrade($result)
-    {
-        if ($result > $this->result) {
-            $this->result = $result;
-        }
-
-        if ($this->result >= 5.5) {
-            $this->completed = true;
-        }
-
-        $this->save();
-    }
 
     public function course()
     {

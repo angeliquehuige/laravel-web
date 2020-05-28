@@ -10,60 +10,30 @@
 
             <div class="form-group">
                 <label for="term_id">Term</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="term_id" id="term_id"
-                           value="{{ old("term_id") }}">
+                <div>
+                    <input
+                        class="form-control"
+                        type="number"
+                        min="1"
+                        max="4"
+                        name="term_id"
+                        id="term_id"
+                        value="{{ old("term_id") }}">
                     @if($errors->has("term_id"))
                         <p class="error">{{ $errors->first("term_id") }}</p>
                     @endif
-                    <label class="form-check-label" for="term_id">
-                        1
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="term_id" id="term_id"
-                           value="{{ old("term_id") }}">
-                    @if($errors->has("term_id"))
-                        <p class="error">{{ $errors->first("term_id") }}</p>
-                    @endif
-                    <label class="form-check-label" for="term_id">
-                        2
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="term_id" id="term_id"
-                           value="{{ old("term_id") }}">
-                    @if($errors->has("term_id"))
-                        <p class="error">{{ $errors->first("term_id") }}</p>
-                    @endif
-                    <label class="form-check-label" for="term_id">
-                        3
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="term_id" id="term_id"
-                           value="{{ old("term_id") }}">
-                    @if($errors->has("term_id"))
-                        <p class="error">{{ $errors->first("term_id") }}</p>
-                    @endif
-                    <label class="form-check-label" for="term_id">
-                        4
-                    </label>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="course_name">Course</label>
-
                 <div>
                     <input
                         class="form-control"
-                        type="course_name"
+                        type="text"
                         name="course_name"
                         id="course_name"
                         value="{{ old("course_name") }}">
-
-
                     @if($errors->has("course_name"))
                         <p class="error">{{ $errors->first("course_name") }}</p>
                     @endif
@@ -71,14 +41,14 @@
             </div>
 
             <div class="form-group">
-                <label for="assignment_name">Assignment name</label>
+                <label for="course_name">Assignment</label>
                 <div>
-                <textarea
-                    class="form-control"
-                    name="assignment_name"
-                    id="assignment_name"
-                >{{ old("assignment_name") }}</textarea>
-
+                    <input
+                        class="form-control"
+                        type="text"
+                        name="assignment_name"
+                        id="assignment_name"
+                        value="{{ old("assignment_name") }}">
                     @if($errors->has("assignment_name"))
                         <p class="error">{{ $errors->first("assignment_name") }}</p>
                     @endif
@@ -86,20 +56,53 @@
             </div>
 
             <div class="form-group">
-                <label for="assingnment_result">Result</label>
-
+                <label for="assingnment_weight">Weight %</label>
                 <div>
-                <textarea
-                    class="form-control"
-                    type="text"
-                    name="assingnment_result"
-                    id="assingnment_result"
-                >{{ old("assingnment_result") }}</textarea>
-
-                    @if($errors->has("assingnment_result"))
-                        <p class="error">{{ $errors->first("assingnment_result") }}</p>
+                    <input
+                        class="form-control"
+                        type="number"
+                        min="25"
+                        max="100"
+                        name="assingnment_weight"
+                        id="assingnment_weight"
+                        value="{{ old("assingnment_weight") }}">
+                    @if($errors->has("assingnment_weight"))
+                        <p class="error">{{ $errors->first("assingnment_weight") }}</p>
                     @endif
+                </div>
+            </div>
 
+            <div class="form-group">
+                <label for="course_ec">EC</label>
+                <div>
+                    <input
+                        class="form-control"
+                        type="number"
+                        min="0"
+                        max="15"
+                        name="course_ec"
+                        id="course_ec"
+                        value="{{ old("course_ec") }}">
+                    @if($errors->has("course_ec"))
+                        <p class="error">{{ $errors->first("course_ec") }}</p>
+                    @endif
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="assignment_result">Result</label>
+                <div>
+                    <input
+                        class="form-control"
+                        type="number"
+                        min="0"
+                        max="10"
+                        name="assignment_result"
+                        id="assignment_result"
+                        value="{{ old("assignment_result") }}">
+                    @if($errors->has("assignment_result"))
+                        <p class="error">{{ $errors->first("assignment_result") }}</p>
+                    @endif
                 </div>
             </div>
 
