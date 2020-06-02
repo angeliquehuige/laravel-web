@@ -29,9 +29,7 @@ class ArticlesController extends Controller
 
     public function store()
     {
-
         Article::create($this->validateArticle());
-
         return redirect("/blog");
     }
 
@@ -69,9 +67,9 @@ class ArticlesController extends Controller
         return request()->validate([
             "title" => "required",
             "location" => "required",
-            "month" => "required",
             "year" => "required",
-            "mainpic" => "required",
+            "month" => "required",
+            "mainpic" => "required | active_url",
             "description" => "required",
             "body" => "required"
         ]);

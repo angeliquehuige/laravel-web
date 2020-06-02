@@ -17,12 +17,13 @@
                             type="text"
                             name="title"
                             id="title"
-                            value="{{ old("title") }}">
+                            value="{{ old("title") }}"
+                            required>
                     </div>
                 </div>
 
                 <div class="form-group col">
-                    <label for="mainpic">Image link</label>
+                    <label for="mainpic">Image</label>
 
                     <div>
                         <input
@@ -30,7 +31,18 @@
                             type="text"
                             name="mainpic"
                             id="mainpic"
-                            value="{{ old("mainpic") }}">
+                            value="{{ old("mainpic") }}"
+                            required>
+                        <small id="mainpicHelp" class="form-text text-muted">Enter the image URL address </small>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        Please enter a valid image URL address
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -44,7 +56,8 @@
                             type="text"
                             name="location"
                             id="location"
-                            value="{{ old("location") }}">
+                            value="{{ old("location") }}"
+                            required>
                     </div>
                 </div>
                 <div class="form-group col">
@@ -56,13 +69,23 @@
                             type="text"
                             name="year"
                             id="year"
-                            value="{{ old("year") }}">
+                            value="{{ old("year") }}"
+                            required>
+{{--                        @if ($errors->any())--}}
+{{--                            <div class="alert alert-danger">--}}
+{{--                                <ul>--}}
+{{--                                    @foreach ($errors->all() as $error)--}}
+{{--                                        Please enter a date between 2015 and the current year--}}
+{{--                                    @endforeach--}}
+{{--                                </ul>--}}
+{{--                            </div>--}}
+{{--                        @endif--}}
                     </div>
                 </div>
                 <div class="form-group col">
                     <label for="month">Month</label>
                     <div>
-                        <select id="month" class="form-control" name="month">
+                        <select id="month" class="form-control" name="month" required>
                             <option selected>January</option>
                             <option>February</option>
                             <option>March</option>
@@ -86,6 +109,7 @@
                     class="form-control"
                     name="description"
                     id="description"
+                    required
                 >{{ old("description") }}</textarea>
                 </div>
             </div>
@@ -99,6 +123,7 @@
                     type="body"
                     name="body"
                     id="body"
+                    required
                 >{{ old("body") }}</textarea>
                 </div>
             </div>
@@ -113,7 +138,6 @@
                     </button>
                 </div>
             </div>
-
         </form>
     </div>
 @endsection
