@@ -5,8 +5,9 @@
     <h1 class="heading">New article</h1>
 
     <div class="container form normal">
-        <form method="POST" action="/blog">
+        <form method="POST" action="/blog" id="validate_form">
             @csrf
+            <small><i>All fields are required unless marked optional</i></small><br><br>
             <div class="form-row">
                 <div class="form-group col">
                     <label for="title">Title</label>
@@ -17,8 +18,15 @@
                             type="text"
                             name="title"
                             id="title"
+                            data-parsley-minlength="10"
+                            data-parsley-trigger="keyup"
+                            data-parsley-required
                             value="{{ old("title") }}"
                             required>
+                        <small id="titleHelp" class="form-text text-muted">Enter at least 10 characters</small>
+                        <div class="error">
+                            @error('title') {{ $message }} @enderror
+                        </div>
                     </div>
                 </div>
 
@@ -31,18 +39,15 @@
                             type="text"
                             name="mainpic"
                             id="mainpic"
+                            data-parsley-type="url"
+                            data-parsley-trigger="keyup"
+                            data-parsley-required
                             value="{{ old("mainpic") }}"
                             required>
                         <small id="mainpicHelp" class="form-text text-muted">Enter the image URL address </small>
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        Please enter a valid image URL address
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
+                        <div class="error">
+                        @error('mainpic') {{ $message }} @enderror
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,8 +61,13 @@
                             type="text"
                             name="location"
                             id="location"
+                            data-parsley-required
+                            data-parsley-trigger="keyup"
                             value="{{ old("location") }}"
                             required>
+                        <div class="error">
+                            @error('location') {{ $message }} @enderror
+                        </div>
                     </div>
                 </div>
                 <div class="form-group col">
@@ -69,24 +79,21 @@
                             type="text"
                             name="year"
                             id="year"
+                            data-parsley-required
+                            data-parsley-trigger="keyup"
                             value="{{ old("year") }}"
                             required>
-{{--                        @if ($errors->any())--}}
-{{--                            <div class="alert alert-danger">--}}
-{{--                                <ul>--}}
-{{--                                    @foreach ($errors->all() as $error)--}}
-{{--                                        Please enter a date between 2015 and the current year--}}
-{{--                                    @endforeach--}}
-{{--                                </ul>--}}
-{{--                            </div>--}}
-{{--                        @endif--}}
+                        <div class="error">
+                            @error('year') {{ $message }} @enderror
+                        </div>
                     </div>
                 </div>
                 <div class="form-group col">
-                    <label for="month">Month</label>
+                    <label for="month">Month <small><i>(opt.)</i></small></label>
                     <div>
-                        <select id="month" class="form-control" name="month" required>
-                            <option selected>January</option>
+                        <select id="month" class="form-control" name="month">
+                            <option selected>{{ old("description") }}</option>
+                            <option>January</option>
                             <option>February</option>
                             <option>March</option>
                             <option>April</option>
@@ -109,8 +116,12 @@
                     class="form-control"
                     name="description"
                     id="description"
+                    data-parsley-minlength="150"
+                    data-parsley-trigger="keyup"
+                    data-parsley-required
                     required
                 >{{ old("description") }}</textarea>
+                    <small id="descriptionHelp" class="form-text text-muted">Enter at least 150 characters</small>
                 </div>
             </div>
 
@@ -123,11 +134,12 @@
                     type="body"
                     name="body"
                     id="body"
+                    data-parsley-required
+                    data-parsley-trigger="keyup"
                     required
                 >{{ old("body") }}</textarea>
                 </div>
             </div>
-
             <div>
                 <div>
                     <button

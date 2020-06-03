@@ -48,6 +48,7 @@
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="http://parsleyjs.org/dist/parsley.js"></script>
 <script>
     var duplicates = [];
     $('#dashboardTable .duplicates').each(function () {
@@ -59,6 +60,11 @@
 
         }
     });
+</script>
+<script>
+    $(document).ready(function(){
+        $('#validate_form').parsley();
+    })
 </script>
 
 </body>

@@ -65,12 +65,11 @@ class ArticlesController extends Controller
     protected function validateArticle(): array
     {
         return request()->validate([
-            "title" => "required",
+            "title" => "required | min:10 | unique:articles",
             "location" => "required",
-            "year" => "required",
-            "month" => "required",
+            "year" => "required | numeric ",
             "mainpic" => "required | active_url",
-            "description" => "required",
+            "description" => "required | min:150",
             "body" => "required"
         ]);
     }
