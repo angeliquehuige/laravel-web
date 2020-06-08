@@ -36,6 +36,7 @@ Route::get("/blog/{article}/destroy", "ArticlesController@destroy");
 
 // Route for dashboard
 Route::resource("dashboard", "AssignmentsController" ,['parameters' => ['dashboard' => 'assignment']]);
+Route::get("/dashboard/assignment/create", "AssignmentsController@create");
 
 
 

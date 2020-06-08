@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 class ArticlesController extends Controller
 {
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         $articles = Article::orderByDesc('created_at')->paginate(5);
@@ -15,24 +18,38 @@ class ArticlesController extends Controller
         return view("articles.article", ["articles" => $articles]);
     }
 
+    /**
+     * @param Article $article
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show(Article $article)
     {
 
         return view("articles.show", ["article" => $article]);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function create()
     {
 
         return view("articles.create");
     }
 
+    /**
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function store()
     {
         Article::create($this->validateArticle());
         return redirect("/blog");
     }
 
+    /**
+     * @param Article $article
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function edit(Article $article)
     {
 
@@ -40,6 +57,10 @@ class ArticlesController extends Controller
 
     }
 
+    /**
+     * @param Article $article
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function update(Article $article)
     {
 
@@ -49,6 +70,12 @@ class ArticlesController extends Controller
 
     }
 
+
+    /**
+     * @param Article $article
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @throws \Exception
+     */
     public function destroy(Article $article)
     {
 

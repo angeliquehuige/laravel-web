@@ -80,6 +80,7 @@
                             name="year"
                             id="year"
                             data-parsley-required
+                            data-parsley-type="number"
                             data-parsley-trigger="keyup"
                             value="{{ old("year") }}"
                             required>
@@ -92,7 +93,7 @@
                     <label for="month">Month <small><i>(opt.)</i></small></label>
                     <div>
                         <select id="month" class="form-control" name="month">
-                            <option selected>{{ old("description") }}</option>
+                            <option selected>{{ old("month") }}</option>
                             <option>January</option>
                             <option>February</option>
                             <option>March</option>
@@ -121,6 +122,9 @@
                     data-parsley-required
                     required
                 >{{ old("description") }}</textarea>
+                    <div class="error">
+                        @error('description') {{ $message }} @enderror
+                    </div>
                     <small id="descriptionHelp" class="form-text text-muted">Enter at least 150 characters</small>
                 </div>
             </div>
@@ -138,6 +142,9 @@
                     data-parsley-trigger="keyup"
                     required
                 >{{ old("body") }}</textarea>
+                    <div class="error">
+                        @error('body') {{ $message }} @enderror
+                    </div>
                 </div>
             </div>
             <div>
@@ -151,5 +158,6 @@
                 </div>
             </div>
         </form>
+        <br><br>
     </div>
 @endsection

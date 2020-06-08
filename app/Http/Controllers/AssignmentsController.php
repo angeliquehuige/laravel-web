@@ -7,14 +7,19 @@ use Illuminate\Http\Request;
 
 class AssignmentsController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index(){
-
         $assignments = Assignment::all();
 
         return view('dashboard.dashboard')->with('assignments', $assignments);
-
     }
 
+    /**
+     * @param Assignment $assignment
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show(Assignment $assignment)
     {
 
@@ -22,13 +27,19 @@ class AssignmentsController extends Controller
 
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function create(){
 
-        return view("dashboard.create");
+        return view("dashboard.assignments.create");
 
 
     }
 
+    /**
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function store() {
 
         Assignment::create($this->validateArticle());
@@ -37,6 +48,10 @@ class AssignmentsController extends Controller
 
     }
 
+    /**
+     * @param Assignment $assignment
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function edit(Assignment $assignment) {
 
         return view("dashboard.edit", compact("assignment"));
@@ -44,6 +59,10 @@ class AssignmentsController extends Controller
 
     }
 
+    /**
+     * @param Assignment $assignment
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function update(Assignment $assignment) {
 
         $assignment->update($this->validateArticle());
@@ -52,7 +71,17 @@ class AssignmentsController extends Controller
 
     }
 
-    public function destroy() {
+    /**
+     * @param Assignment $assignment
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @throws \Exception
+     */
+    public function destroy(Assignment $assignment) {
+
+        $assignment->delete();
+
+
+        return redirect("/dashboard");
 
     }
 
@@ -62,12 +91,10 @@ class AssignmentsController extends Controller
     protected function validateArticle(): array
     {
         return request()->validate([
-            "term_id" => "required",
-            "course_name" => "required",
-            "assignment_name" => "required",
-            "assingment_weight" => "required",
-            "course_ec" => "required",
-            "assignment_result" => "required"
+            "course_id" => "required",
+            "name" => "required",
+            "weight" => "required",
+            "result" => "required",
         ]);
     }
 }

@@ -10,8 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Assignment extends Model
 {
-    protected $fillable = ["term_id", "course_name", "assignment_name", "assingment_weight", "course_ec", "assignment_result"];
-    private $result;
+    protected $fillable = ["course_id", "name", "weight", "result"];
 
     public function course()
     {
