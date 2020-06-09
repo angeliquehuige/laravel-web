@@ -11,13 +11,13 @@
 |
 */
 
-Route::get("/", function () {
+Route::get("/home", function () {
     return view("index");
-});
+})->middleware('auth');
 
 Route::get("/profile", function () {
     return view("profile");
-});
+})->middleware('auth');
 
 //Route::get("/blog", function () {
 //    return view("article", [
@@ -26,25 +26,19 @@ Route::get("/profile", function () {
 //});
 
 // Routes for ArticlesController
-Route::get("/blog", "ArticlesController@index");
-Route::post("/blog", "ArticlesController@store");
-Route::get("/blog/create", "ArticlesController@create");
-Route::get("/blog/{article}", "ArticlesController@show");
-Route::get("/blog/{article}/edit", "ArticlesController@edit");
-Route::put("/blog/{article}", "ArticlesController@update");
-Route::get("/blog/{article}/destroy", "ArticlesController@destroy");
+Route::get("/blog", "ArticlesController@index")->middleware('auth');
+Route::post("/blog", "ArticlesController@store")->middleware('auth');
+Route::get("/blog/create", "ArticlesController@create")->middleware('auth');
+Route::get("/blog/{article}", "ArticlesController@show")->middleware('auth');
+Route::get("/blog/{article}/edit", "ArticlesController@edit")->middleware('auth');
+Route::put("/blog/{article}", "ArticlesController@update")->middleware('auth');
+Route::get("/blog/{article}/destroy", "ArticlesController@destroy")->middleware('auth');
 
 // Route for dashboard
-Route::resource("dashboard", "AssignmentsController" ,['parameters' => ['dashboard' => 'assignment']]);
-Route::get("/dashboard/assignment/create", "AssignmentsController@create");
-
-
-
-
-
-
+Route::resource("dashboard", "AssignmentsController" ,['parameters' => ['dashboard' => 'assignment']])->middleware('auth');
+Route::get("/dashboard/assignment/create", "AssignmentsController@create")->middleware('auth');
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
