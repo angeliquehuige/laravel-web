@@ -171,10 +171,3 @@ textarea.parsley-error {
 .parsley-errors-list.filled {
     opacity: 1;
 }
-
-#viewDiv {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}

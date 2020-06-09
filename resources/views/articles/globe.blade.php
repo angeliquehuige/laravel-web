@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.12/esri/themes/light/main.css"/>
     <link rel="stylesheet" href="/css/globe.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
 
     <script src="https://js.arcgis.com/4.12/"></script>
     <script>
@@ -17,19 +18,26 @@
             "esri/layers/TileLayer",
             "esri/layers/GeoJSONLayer",
             "esri/Basemap",
+
+            "esri/Graphic",
+            "esri/geometry/Point",
             "esri/geometry/Mesh"
-        ], function (Map, SceneView, TileLayer, GeoJSONLayer, Basemap, Mesh) {
+        ], function (Map, SceneView, TileLayer, GeoJSONLayer, Basemap, Graphic, Point, Mesh) {
+
+
+            const R = 6358137; // approximate radius of the Earth in m
+            const offset = 200000; // offset from the ground used for the clouds
 
             const basemap = new Basemap({
                 baseLayers: [
                     new TileLayer({
-                        url: "https://tiles.arcgis.com/tiles/nGt4QxSblgDfeJn9/arcgis/rest/services/terrain_with_heavy_bathymetry/MapServer"
+                        url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer"
                     })
                 ]
             });
 
             const map = new Map({
-                basemap: "national-geographic"
+                basemap: basemap
             });
 
             const view = new SceneView({
@@ -38,23 +46,23 @@
                 alphaCompositingEnabled: true,
                 qualityProfile: "high",
                 camera: {
-                    position: [20.895168, 22.370216, 28000000],
+                    position: [20, 22, 25000000],
                 },
                 environment: {
                     background: {
                         type: "color",
-                        color: [255, 252, 244, 0]
+                        color: [244, 244, 244, 0]
                     },
                     starsEnabled: false,
                     atmosphereEnabled: false,
                     lighting: {
                         directShadowsEnabled: false,
-                    },
+                    }
                 },
                 constraints: {
                     altitude: {
-                        min: 10000000,
-                        max: 28000000
+                        min: 1000000,
+                        max: 25000000
                     }
                 },
                 popup: {
@@ -67,12 +75,35 @@
                     collapseEnabled: false
                 },
                 highlightOptions: {
-                    color: '#a8dafc',
+                    color: [255, 255, 255],
                     haloOpacity: 0.5
                 }
             });
 
             view.ui.empty("top-left");
+
+            const cloudsSphere = Mesh.createSphere(new Point({
+                x: 0, y: -90, z: -(2 * R + offset)
+            }), {
+                size: 2 * (R + offset),
+                material: {
+                    colorTexture: '/images/clouds-nasa.png',
+                    doubleSided: false
+                },
+                densificationFactor: 4
+            });
+
+            cloudsSphere.components[0].shading = "flat";
+
+            const clouds = new Graphic({
+                geometry: cloudsSphere,
+                symbol: {
+                    type: "mesh-3d",
+                    symbolLayers: [{ type: "fill" }]
+                }
+            });
+
+            view.graphics.add(clouds);
 
             const extremesLayer = new GeoJSONLayer({
                 url: "/GeoJSON/visits.geojson",
@@ -84,46 +115,41 @@
                     type: "simple",
                     symbol: {
                         type: "point-3d",
-                        symbolLayers: [
-                            {
-                                // autocasts as new IconSymbol3DLayer()
-                                type: "icon",
-                                resource: {
-                                    href: '/images/map-marker-alt-solid.svg'
-                                },
-                                size: 50,
-                            }
-                        ],
-                    },
+                        symbolLayers: [{
+                            type: "icon",
+                            resource: { href: '/images/dot-circle-regular.svg' },
+                            size: 25
+                        },
+                        ]
+                    }
                 },
                 popupTemplate: {
-                    title: "{country}",
-                    content:
-                        `<div class="popupImage">
-              <img src="{imageUrl}"/>
+                    title: "{name}",
+                    content: `
+            <div class="popupImage">
+              <img src="{imageUrl}" alt="{imageCaption}"/>
             </div>
+            <div class="popupImageCaption">{imageCaption}</div>
             <div class="popupDescription">
               <p class="info">
-                <span class="esri-icon-map-pin"></span><span> {location}</span>
+                <span class="esri-icon-favorites"></span> {type}
               </p>
               <p class="info">
-                <span class="esri-icon-chat"></span><span> {language}</span>
+                <span class="esri-icon-map-pin"></span> {location}
               </p>
               <p class="info">
-                <span class="esri-icon-group"></span> {population}
+                <span class="esri-icon-documentation"></span> {facts}
               </p>
-              <p class="info">
-                <span class="esri-icon-collection"></span> {facts}
-              </p>
-               <div class="text-center">
-                <a class="link-unstyled btn btn-outline-light putUrlHere" href="">
-                    Take me there!
-                </a>
-               </div>
-            </div>`
+            </div>
+            <div class="popupCredits">
+              Sources: <a href="{sourceUrl}" target="_blank">{source}</a> released under <a href="{sourceCopyrightUrl}">{sourceCopyright}</a>, <a href="{imageCopyrightUrl}" target="_blank">{imageCopyright}</a>.
+            </div>
+          `
                 }
             });
+
             map.layers.add(extremesLayer);
+
         });
     </script>
 </head>
