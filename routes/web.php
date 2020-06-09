@@ -42,3 +42,7 @@ Route::get("/dashboard/assignment/create", "AssignmentsController@create")->midd
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get("/globe", function () {
+    return view("articles.globe");
+})->middleware('auth');

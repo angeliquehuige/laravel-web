@@ -1,0 +1,214 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "CN",
+        "country": "China",
+        "imageUrl": "https://images.pexels.com/photos/1115175/pexels-photo-1115175.jpeg",
+        "location": "East Asia",
+        "language": "The official language of China is Mandarin.",
+        "population": "The population of China is 1.393 billion.",
+        "facts": "China is the world's third biggest country by territory and has the largest population. It is one of the longest-running civilizations on earth with its unique and attractive culture. China has developed at record speed, to become the second largest economy in the world."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.195397,
+          35.86166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "IN",
+        "country": "India",
+        "imageUrl": "https://images.unsplash.com/photo-1576568740080-b957a912a91c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+        "location": "South Asia",
+        "language": "The official languages are Hindi and English.",
+        "population": "The population of India is 1.353 billion.",
+        "facts": "Its government is a constitutional republic that represents a highly diverse population consisting of thousands of ethnic groups and likely hundreds of languages. India has the largest postal network in the world, with over 1,55,015 post offices."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.96288,
+          20.593684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "US",
+        "country": "United States",
+        "imageUrl": "https://images.pexels.com/photos/1634279/pexels-photo-1634279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "location": "North America",
+        "language": "The national language is English.",
+        "population": "The population of the United States is 328.2 million.",
+        "facts": "The major characteristic of the United States is probably its great variety. Its physical environment ranges from the Arctic to the subtropical, from the moist rain forest to the arid desert, from the rugged mountain peak to the flat prairie."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.712891,
+          37.09024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "ID",
+        "country": "Indonesia",
+        "imageUrl": "https://images.unsplash.com/photo-1538582709238-0a503bd5ae04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+        "location": "Southeast Asia and Oceania",
+        "language": "The official language is Indonesian",
+        "population": "The population is 267.7 million",
+        "facts": "Despite the abundance of islands, tourists tend to cram onto just one and fight for space: Bali. Because of that reason, tourism is a great part of the economy. It's also a major exporter of crude petroleum and natural gas."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.921327,
+          -0.789275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "BR",
+        "country": "Brazil",
+        "imageUrl": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "location": "South America",
+        "language": "The official language is Portuguese.",
+        "population": "The population of Brazil is 209.5 million.",
+        "facts": " Brazil is a top global producer of coffee, and the country's economy is active in the agricultural, manufacturing, mining and service sectors. Brazil is one of the world's top tourist destinations, but the country in the 21st century faces serious questions regarding poverty, inequality, governance and the environment."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -51.92528,
+          -14.235004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "PK",
+        "country": "Pakistan",
+        "imageUrl": "https://images.unsplash.com/photo-1539268644145-19e91dd45e51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1048&q=80",
+        "location": "South Asia",
+        "language": "The official languages are Urdu and English",
+        "population": "The population of Pakistan is 212.2 million.",
+        "facts": "One of the world's earliest and largest civilizations flourished in this region. Pakistan's superior position in Asia makes it a center of trade in the region. Their largest natural deep port of the world acts as a portal for western China."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.345116,
+          30.375321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "NG",
+        "country": "<strong>Nigeria</strong>",
+        "imageUrl": "https://images.unsplash.com/photo-1572816225927-d08fb138f2b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+        "location": "West Africa",
+        "language": "The official language is English.",
+        "population": "The population of Nigeria is 195.9 million.",
+        "facts": "Nigeria has over 500 indigenous languages and 250 ethnic groups with a distinct culture and traditions.They are a large producer of crude oil, with an average of 2,5 million barrels a day. It plays a vital role in the Nigerian economy."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.675277,
+          9.081999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "BD",
+        "country": "Bangladesh",
+        "imageUrl": "https://images.unsplash.com/photo-1583429891508-015ef9cd958e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "location": "South Asia",
+        "language": "The official language is Bengali",
+        "population": "The population of Bangladesh is 161.4 million",
+        "facts": "Bangladesh as a country only exists since 1971. It used to be East Pakistan until its independence. Many worldwide clothing brands source their products from Bangladesh, with an estimated 4,000 garment factories in operation. Along with this, problems of child labour and lack of work environment safety exist."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.356331,
+          23.684994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "RU",
+        "country": "Russia",
+        "imageUrl": "https://images.unsplash.com/photo-1545761931-0d597948c4c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+        "location": "Eastern Europe and Northern Asia",
+        "language": "The official language is Russian.",
+        "population": "The population of Russia is 144.5 million.",
+        "facts": "Russia has more billionaires than anywhere else in the world - 79, according to Forbes. It does seem that Russia is a very corrupt country, ranked 137 out of 198 on Transparency International’s 2019 Corruption Perception Index. Moscow and St. Petersburg are the two most important cultural and financial centres in Russia  "
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.318756,
+          61.52401
+        ]
+      }
+    },
+        {
+          "type": "Feature",
+          "properties": {
+            "country_code": "DE",
+            "country": "Germany",
+            "imageUrl": "https://images.unsplash.com/photo-1527142573877-7d395d8fa568?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+            "location": "Western Europe",
+            "language": "The official language is German.",
+            "population": "The population of Germany is 83.02 million.",
+            "facts": "Germany is Europe's most industrialised and populous country. Famed for its technological achievements, it has also produced some of Europe's most celebrated composers, philosophers and poets."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              10.451526,
+              51.165691
+            ]
+          }
+        },
+    {
+      "type": "Feature",
+      "properties": {
+        "country_code": "MX",
+        "country": "Mexico",
+        "imageUrl": "https://images.unsplash.com/photo-1512813195386-6cf811ad3542?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "location": "North America",
+        "language": "The official language is Spanish.",
+        "population": "The population of Mexico is 126.2 million.",
+        "facts": "Mexico is a country with great problems and great potential. It has lots of valuable, natural resources like oil, silver, copper and agricultural products, too. But political and economic problems have kept much of the population in poverty."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.552784,
+          23.634501
+        ]
+      }
+    }
+  ]
+}
