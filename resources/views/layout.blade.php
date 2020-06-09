@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Angie's Portfolio - Home</title>
     <link rel="stylesheet"
-          href="{{ URL::asset('https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap') }}">
-    <link rel="stylesheet" href="{{ URL::asset('/css/app.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('/css/style.css') }}">
+          href="{{ URL::secure_asset('https://fonts.googleapis.com/css?family=Montserrat:200,400,600&display=swap') }}">
+    <link rel="stylesheet" href="{{ URL::secure_asset('/css/app.css') }}">
+    <link rel="stylesheet" href="{{ URL::secure_asset('/css/style.css') }}">
 </head>
 
 <body>
