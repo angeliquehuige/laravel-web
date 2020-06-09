@@ -44,3 +44,7 @@ Route::get("/dashboard/assignment/create", "AssignmentsController@create");
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
