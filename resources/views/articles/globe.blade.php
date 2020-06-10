@@ -141,9 +141,6 @@
                 <span class="esri-icon-documentation"></span> {facts}
               </p>
             </div>
-            <div class="popupCredits">
-              Sources: <a href="{sourceUrl}" target="_blank">{source}</a> released under <a href="{sourceCopyrightUrl}">{sourceCopyright}</a>, <a href="{imageCopyrightUrl}" target="_blank">{imageCopyright}</a>.
-            </div>
           `
                 }
             });

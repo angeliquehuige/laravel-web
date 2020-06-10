@@ -171,18 +171,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ostersund",
-        "type": "Most distant point from land ○ 2,688 km (1,670 mi) from the nearest land",
-        "location": "South Pacific Ocean",
-        "facts": "The oceanic pole of inaccessibility was officially discovered in 1992 by survey engineer Hrvoje Lukatela. The pole has been nicknamed Point Nemo, after author Jules Verne's famous Captain Nemo. The name also means \"no-one\" in Latin, which is fitting because Point Nemo is so far from land, that the nearest humans are often astronauts. The International Space Station orbits the Earth at a maximum of 258 miles (416 km), meanwhile the nearest landmass is Ducie Island, an uninhabited atoll in the Pitcairn Islands, over 1,670 miles (2,700 km) away.",
-        "imageCaption": "Ducie Atoll, closest landmass to Point Nemo",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Ducie02_AKK.jpg",
-        "imageCopyright": "Image by Angela K. Kepler under Public Domain",
-        "imageCopyrightUrl": "https://en.wikipedia.org/wiki/Ducie_Island#/media/File:Ducie02_AKK.jpg",
-        "source": "Pole of inaccessibility Wikipedia article",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Pole_of_inaccessibility",
-        "sourceCopyright": "CC BY-SA 3.0",
-        "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+        "name": "Östersund, Sweden",
+        "type": "My hair literally froze in Östersund and I though it would be a good idea to NOT bring snowboots, but my fashionably pointy leather chelseas...",
+        "location": "January 2018",
+        "facts": "This pleasant town by Storsjön lake, in whose chilly waters is said to lurk a rarely sighted monster, is a relaxed and scenic gateway town for further explorations of Norrland. It's remote enough that if you are approaching by car, you can expect to see almost as many reindeer as cars.",
+        "imageCaption": "An old Swedish Shell station",
+        "imageUrl": "https://i.ibb.co/p09nZW4/ostersund.jpg"
       },
       "geometry": {
         "type": "Point",
@@ -195,18 +189,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Are",
-        "type": "Most distant point from land ○ 2,688 km (1,670 mi) from the nearest land",
-        "location": "South Pacific Ocean",
-        "facts": "The oceanic pole of inaccessibility was officially discovered in 1992 by survey engineer Hrvoje Lukatela. The pole has been nicknamed Point Nemo, after author Jules Verne's famous Captain Nemo. The name also means \"no-one\" in Latin, which is fitting because Point Nemo is so far from land, that the nearest humans are often astronauts. The International Space Station orbits the Earth at a maximum of 258 miles (416 km), meanwhile the nearest landmass is Ducie Island, an uninhabited atoll in the Pitcairn Islands, over 1,670 miles (2,700 km) away.",
-        "imageCaption": "Ducie Atoll, closest landmass to Point Nemo",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Ducie02_AKK.jpg",
-        "imageCopyright": "Image by Angela K. Kepler under Public Domain",
-        "imageCopyrightUrl": "https://en.wikipedia.org/wiki/Ducie_Island#/media/File:Ducie02_AKK.jpg",
-        "source": "Pole of inaccessibility Wikipedia article",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Pole_of_inaccessibility",
-        "sourceCopyright": "CC BY-SA 3.0",
-        "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+        "name": "Åre, Sweden",
+        "type": "Åre is Sweden's most popular resort and the biggest ski area in the Nordic countries",
+        "location": "January 2018",
+        "facts": "Facts about the trip here",
+        "imageCaption": "On the E14, on the way to Trondheim, Norway",
+        "imageUrl": "https://i.ibb.co/K26fzQm/are.jpg"
       },
       "geometry": {
         "type": "Point",
@@ -219,18 +207,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hell",
-        "type": "Most distant point from land ○ 2,688 km (1,670 mi) from the nearest land",
-        "location": "South Pacific Ocean",
-        "facts": "The oceanic pole of inaccessibility was officially discovered in 1992 by survey engineer Hrvoje Lukatela. The pole has been nicknamed Point Nemo, after author Jules Verne's famous Captain Nemo. The name also means \"no-one\" in Latin, which is fitting because Point Nemo is so far from land, that the nearest humans are often astronauts. The International Space Station orbits the Earth at a maximum of 258 miles (416 km), meanwhile the nearest landmass is Ducie Island, an uninhabited atoll in the Pitcairn Islands, over 1,670 miles (2,700 km) away.",
-        "imageCaption": "Ducie Atoll, closest landmass to Point Nemo",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Ducie02_AKK.jpg",
-        "imageCopyright": "Image by Angela K. Kepler under Public Domain",
-        "imageCopyrightUrl": "https://en.wikipedia.org/wiki/Ducie_Island#/media/File:Ducie02_AKK.jpg",
-        "source": "Pole of inaccessibility Wikipedia article",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Pole_of_inaccessibility",
-        "sourceCopyright": "CC BY-SA 3.0",
-        "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+        "name": "Stormoen, Norway",
+        "type": "The picture was taken at a Norwegian landmark: King Carl Johans Klev. See, that's funny, because he was actually a Swedish king. He was first crowned in Stockholm.",
+        "location": "January 2018",
+        "facts": " In 1821, the Swedish-Norwegian king Carl Johan decided that a road should be built over the Skalstufjellet mountain to Verdal and it was completed in 1835. Nearly 200 years later the road is still both beautiful and well passable.",
+        "imageCaption": "Embracing the scenery, didn't dare to cross the bridge though.",
+        "imageUrl": "https://i.ibb.co/hf9pL6X/hell.jpg"
       },
       "geometry": {
         "type": "Point",
