@@ -27,8 +27,8 @@
                 <li class="nav-item {{ Request::path() === "dashboard" ? "active" : "" }}">
                     <a class="nav-link" href="/dashboard">Dashboard</a>
                 </li>
-                <li class="nav-item {{ Request::path() === "profile" ? "active" : "" }}">
-                    <a class="nav-link" href="/profile">About</a>
+                <li class="nav-item {{ Request::path() === "globe" ? "active" : "" }}">
+                    <a class="nav-link" href="/globe">Globe</a>
                 </li>
                 <li class="nav-item {{ Request::path() === "article" ? "active" : "" }}">
                     <a class="nav-link" href="/blog">Blog</a>
