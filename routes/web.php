@@ -45,4 +45,4 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get("/globe", function () {
     return view("articles.globe");
-})->middleware('auth');
+});

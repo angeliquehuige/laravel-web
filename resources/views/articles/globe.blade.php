@@ -118,7 +118,7 @@
                         symbolLayers: [{
                             type: "icon",
                             resource: { href: '/images/dot-circle-regular.svg' },
-                            size: 25
+                            size: 15
                         },
                         ]
                     }
