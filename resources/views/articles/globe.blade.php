@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="initial-scale=1"/>
-    <title>The globe of extremes</title>
+    <title>ANGELUSIVE - Globe</title>
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.12/esri/themes/light/main.css"/>
     <link rel="stylesheet" href="/css/globe.css"/>
